@@ -2,7 +2,8 @@ from stem.descriptor import DocumentHandler
 from stem.descriptor import parse_file
 import glob
 
-for consensus in glob.glob('./archive/consensuses/*'):
+# for consensus in glob.glob('./archive/consensuses/*'):
+for consensus in glob.glob('./archive/per_month_consensuses/**/*consensus', recursive=True):
     # In theory, when we need to check if the flag is in the
     # known_flags set, before testing it against all the
     # relays. However, since Valid, Guard and Exit are supported since
@@ -20,7 +21,8 @@ for consensus in glob.glob('./archive/consensuses/*'):
             elif 'Exit' in desc.flags:
                 role = 'Exit'
             else:
-                role = 'Middle'
+                continue
+                # role = 'Middle'
             print(desc.fingerprint, \
                   desc.published, \
                   # desc.flags, \
