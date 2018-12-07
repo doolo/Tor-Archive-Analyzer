@@ -16,10 +16,11 @@ for consensus in glob.glob('./archive/per_month_consensuses/**/*consensus', recu
     #     print(desc.known_flags)
     for desc in parse_file(consensus):
         if 'Valid' in desc.flags:
+            role = []
             if 'Guard' in desc.flags:
-                role = 'Guard'
-            elif 'Exit' in desc.flags:
-                role = 'Exit'
+                role.append('Guard')
+            if 'Exit' in desc.flags:
+                role.append('Exit')
             else:
                 continue
                 # role = 'Middle'
