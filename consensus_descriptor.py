@@ -23,6 +23,10 @@ for consensus in glob.glob('./archive/per_month_consensuses/**/*consensus', recu
                 role.append('Exit')
             if len(role) == 0:
                 continue
+            elif len(role) == 1:
+                role = role[0]
+            elif len(role) == 2:
+                role = "GE"
                 # role = 'Middle'
             print(desc.fingerprint, \
                   desc.published, \
