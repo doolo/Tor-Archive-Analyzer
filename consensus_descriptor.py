@@ -21,7 +21,7 @@ for consensus in glob.glob('./archive/per_month_consensuses/**/*consensus', recu
                 role.append('Guard')
             if 'Exit' in desc.flags:
                 role.append('Exit')
-            else:
+            if len(role) == 0:
                 continue
                 # role = 'Middle'
             print(desc.fingerprint, \
