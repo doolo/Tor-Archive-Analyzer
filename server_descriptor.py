@@ -25,9 +25,10 @@ with DescriptorReader(my_descriptors) as reader:
         # burst_bandwidth (int) -- * burst rate it's willing to relay in bytes/s
         # observed_bandwidth (int) -- * estimated capacity based on usage in bytes/s
         # total_bw += min(desc.average_bandwidth, desc.burst_bandwidth, desc.observed_bandwidth)
+        # or_addresses (list) -- * alternative for our address/or_port attributes, each entry is a tuple of the form (address (str), port (int), is_ipv6 (bool))        
         print(descriptor.fingerprint, \
               descriptor.published, \
-              descriptor.address, \
+              descriptor.or_addresses, \
               descriptor.average_bandwidth, \
               descriptor.burst_bandwidth, \
               descriptor.observed_bandwidth)
