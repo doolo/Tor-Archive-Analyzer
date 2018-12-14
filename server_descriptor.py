@@ -28,10 +28,11 @@ with DescriptorReader(my_descriptors) as reader:
         # or_addresses (list) -- * alternative for our address/or_port attributes, each entry is a tuple of the form (address (str), port (int), is_ipv6 (bool))        
         print(descriptor.fingerprint, \
               descriptor.published, \
-              descriptor.or_addresses, \
+              descriptor.address, \
               descriptor.average_bandwidth, \
               descriptor.burst_bandwidth, \
-              descriptor.observed_bandwidth)
+              descriptor.observed_bandwidth, \
+              descriptor.or_addresses[0] if descriptor.or_addresses[2] is True)
 
 #reader.save_processed_files('/home/user/research/consensus/consensuses/server-descriptors/used_descriptors', reader.get_processed_files())
 
