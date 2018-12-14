@@ -2,6 +2,7 @@ from stem.descriptor.reader import DescriptorReader
 import stem.descriptor.remote
 
 my_descriptors = [
+    # './archive/server-descriptors/server-descriptors-2018-02.tar.xz',
     './archive/server-descriptors/',
 ]
 
