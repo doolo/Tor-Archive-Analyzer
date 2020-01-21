@@ -14,7 +14,7 @@ bash -x download_archive.sh
 bash -x extract_one_consensus_per_month.sh
 ```
 
-### Parse and join the ceonsensus
+### Parse and join the consensus
 
 ``` bash
 # Extract consensus info 
