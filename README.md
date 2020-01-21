@@ -11,7 +11,7 @@ cd archive
 bash -x download_archive.sh
 
 # Extract
-bash -x extract_one_consensus_per_month.sh
+bash -x extract_one_consensus_per_day.sh
 ```
 
 ### Parse and join the consensus
