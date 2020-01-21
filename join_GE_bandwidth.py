@@ -2,7 +2,7 @@ import pprint
 
 d = dict()
 
-with open("14_15_server_descriptors.txt", "r") as sd:
+with open("output_server_descriptor.txt", "r") as sd:
     lines = sd.readlines()
     for line in lines:
         key_value = line.rstrip().rsplit(' ', 4)
@@ -18,7 +18,7 @@ with open("14_15_server_descriptors.txt", "r") as sd:
     # pp = pprint.PrettyPrinter(indent=1)        
     # pp.pprint(d)
 
-with open("GE.txt", "r") as ge:
+with open("output_consensus_descriptor.txt", "r") as ge:
     lines = ge.readlines()
     for line in lines:
         key_value = line.rstrip().rsplit(' ', 1)
