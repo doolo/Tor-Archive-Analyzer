@@ -28,8 +28,8 @@ with DescriptorReader(my_descriptors) as reader:
         # total_bw += min(desc.average_bandwidth, desc.burst_bandwidth, desc.observed_bandwidth)
         # or_addresses (list) -- * alternative for our address/or_port attributes, each entry is a tuple of the form (address (str), port (int), is_ipv6 (bool))
 
-        if len(descriptor.or_addresses) == 0:
-            continue
+#        if len(descriptor.or_addresses) == 0:
+#            continue
         
         IPv6 = []
         for address in descriptor.or_addresses:
